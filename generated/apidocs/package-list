@@ -1,4 +1,4 @@
-at.fhv.cicd.application
-at.fhv.cicd.application.endpoints
-at.fhv.cicd.application.handlers
-at.fhv.cicd.application.models
+at.fhv.weather
+at.fhv.weather.endpoints
+at.fhv.weather.handlers
+at.fhv.weather.models
