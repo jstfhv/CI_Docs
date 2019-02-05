@@ -45,10 +45,10 @@
 |0
 |0
 |22
-|25s 128ms
+|23s 200ms
 |[green]#*passed*#
 12+^|*Totals*
-|4|0|4|22|0|0|0|0|0|22 2+|25s 128ms
+|4|0|4|22|0|0|0|0|0|22 2+|23s 200ms
 |===
 
 == *Features*
@@ -63,62 +63,62 @@ endif::[]
 
 ==========
 Given ::
-Open https://fhvweatherapp.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 355ms)#
+Open https://fhvweatherapp.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 089ms)#
 ==========
 
 ==== Scenario: Test login and logout
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(994ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(941ms)#
 When ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 736ms)#
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 654ms)#
 Then ::
-I see the login page icon:thumbs-up[role="green",title="Passed"] [small right]#(151ms)#
+I see the login page icon:thumbs-up[role="green",title="Passed"] [small right]#(193ms)#
 ==========
 
 ==== Scenario: Test real location
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(992ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(850ms)#
 When ::
-Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 260ms)#
+Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 199ms)#
 Then ::
-The Location should be Dornbirn icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 565ms)#
+The Location should be Dornbirn icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 612ms)#
 And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 637ms)#
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 501ms)#
 ==========
 
 ==== Scenario: Test unknown location
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 066ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(900ms)#
 When ::
-Check the weather 'asdf1234' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 244ms)#
+Check the weather 'asdf1234' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 247ms)#
 Then ::
-The Weather should be City not found icon:thumbs-up[role="green",title="Passed"] [small right]#(691ms)#
+The Weather should be City not found icon:thumbs-up[role="green",title="Passed"] [small right]#(708ms)#
 And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 567ms)#
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 482ms)#
 ==========
 
 ==== Scenario: User interaction with history (video)
 
 ==========
 Given ::
-Login with user 'user2@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(988ms)#
+Login with user 'user2@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 291ms)#
 When ::
-Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 277ms)#
+Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 710ms)#
 When ::
-Check the weather 'Bregenz' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 319ms)#
+Check the weather 'Bregenz' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 239ms)#
 And ::
-Navigate to history icon:thumbs-up[role="green",title="Passed"] [small right]#(499ms)#
+Navigate to history icon:thumbs-up[role="green",title="Passed"] [small right]#(492ms)#
 Then ::
-The 1. row shows the history item with text 'Dornbirn' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(525ms)#
+The 1. row shows the history item with text 'Dornbirn' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(553ms)#
 And ::
-The 2. row shows the history item with text 'Bregenz' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(536ms)#
+The 2. row shows the history item with text 'Bregenz' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(528ms)#
 And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 748ms)#
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 674ms)#
 ==========
 
