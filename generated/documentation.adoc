@@ -1,0 +1,124 @@
+:toc: right
+:backend: html5
+:doctitle: Living Documentation
+:doctype: book
+:icons: font
+:!numbered:
+:!linkcss:
+:sectanchors:
+:sectlink:
+:docinfo:
+:source-highlighter: highlightjs
+:toclevels: 3
+:hardbreaks:
+:chapter-label: Chapter
+:version-label: Version
+
+= *Living Documentation*
+
+== *Summary*
+[cols="12*^m", options="header,footer"]
+|===
+3+|Scenarios 7+|Steps 2+|Features: 1
+
+|[green]#*Passed*#
+|[red]#*Failed*#
+|Total
+|[green]#*Passed*#
+|[red]#*Failed*#
+|[purple]#*Skipped*#
+|[maroon]#*Pending*#
+|[yellow]#*Undefined*#
+|[blue]#*Missing*#
+|Total
+|Duration
+|Status
+
+12+^|*<<Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application>>*
+|4
+|0
+|4
+|22
+|0
+|0
+|0
+|0
+|0
+|22
+|25s 038ms
+|[green]#*passed*#
+12+^|*Totals*
+|4|0|4|22|0|0|0|0|0|22 2+|25s 038ms
+|===
+
+== *Features*
+
+[[Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application, Automated User Acceptance Tests for the Sentiment Analysis Application]]
+=== *Automated User Acceptance Tests for the Sentiment Analysis Application*
+
+ifndef::backend-pdf[]
+minmax::Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application[]
+endif::[]
+==== Background
+
+==========
+Given ::
+Open https://fhvweatherapp.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 510ms)#
+==========
+
+==== Scenario: Test login and logout
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 016ms)#
+When ::
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 611ms)#
+Then ::
+I see the login page icon:thumbs-up[role="green",title="Passed"] [small right]#(153ms)#
+==========
+
+==== Scenario: Test real location
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 077ms)#
+When ::
+Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 286ms)#
+Then ::
+The Location should be Dornbirn icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 570ms)#
+And ::
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 528ms)#
+==========
+
+==== Scenario: Test unknown location
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 166ms)#
+When ::
+Check the weather 'asdf1234' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 277ms)#
+Then ::
+The Weather should be City not found icon:thumbs-up[role="green",title="Passed"] [small right]#(715ms)#
+And ::
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 505ms)#
+==========
+
+==== Scenario: User interaction with history (video)
+
+==========
+Given ::
+Login with user 'user2@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 128ms)#
+When ::
+Check the weather 'Dornbirn' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 309ms)#
+When ::
+Check the weather 'Bregenz' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 290ms)#
+And ::
+Navigate to history icon:thumbs-up[role="green",title="Passed"] [small right]#(580ms)#
+Then ::
+The 1. row shows the history item with text 'Dornbirn' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(541ms)#
+And ::
+The 2. row shows the history item with text 'Bregenz' has weatherinformations icon:thumbs-up[role="green",title="Passed"] [small right]#(554ms)#
+And ::
+I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 783ms)#
+==========
+
