@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+application,at.fhv.weather.handlers,AuthHandler,0,88,0,14,0,22,0,12,0,5
+application,at.fhv.weather.handlers,AnalysisHandler,116,40,2,8,18,12,2,6,0,3
+application,at.fhv.weather.handlers,HistoryHandler,32,22,1,5,9,7,2,5,1,3
+application,at.fhv.weather,Application,5,3,0,0,2,1,1,1,1,1
+application,at.fhv.weather.endpoints,HistoryEndpoint,4,3,0,0,1,1,1,1,1,1
+application,at.fhv.weather.endpoints,AuthEndpoint,0,11,0,0,0,4,0,3,0,3
+application,at.fhv.weather.endpoints,AnalysisEndpoint,0,8,0,0,0,2,0,2,0,2
+application,at.fhv.weather.models,WeatherResult,0,23,0,0,0,9,0,5,0,5
+application,at.fhv.weather.models,User,0,23,0,0,0,9,0,5,0,5
+application,at.fhv.weather.models,HistoryItem,33,0,0,0,13,0,7,0,7,0
+application,at.fhv.weather.models,History,7,8,0,0,3,2,2,1,2,1
